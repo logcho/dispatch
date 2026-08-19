@@ -1,0 +1,67 @@
+/* ─── Badge Styles ───────────────────────────────────────────────────────── */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-family: var(--font-sans);
+  font-weight: var(--weight-medium);
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+  line-height: 1;
+}
+
+/* ── Sizes ────────────────────────────────────────────────────────────────── */
+.badge--sm {
+  font-size: var(--text-xs);
+  padding: 3px 8px;
+}
+
+.badge--md {
+  font-size: var(--text-sm);
+  padding: 4px 10px;
+}
+
+/* ── Variants ─────────────────────────────────────────────────────────────── */
+.badge--default {
+  background: var(--color-bg-overlay);
+  color: var(--color-text-secondary);
+}
+
+.badge--success {
+  background: var(--color-success-muted);
+  color: var(--color-success);
+}
+
+.badge--warning {
+  background: var(--color-warning-muted);
+  color: var(--color-warning);
+}
+
+.badge--error {
+  background: var(--color-error-muted);
+  color: var(--color-error);
+}
+
+.badge--info {
+  background: var(--color-info-muted);
+  color: var(--color-info);
+}
+
+.badge--accent {
+  background: var(--color-accent-muted);
+  color: var(--color-accent);
+}
+
+/* ── Dot ──────────────────────────────────────────────────────────────────── */
+.badge__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  flex-shrink: 0;
+}
+
+.badge__dot--pulse {
+  animation: progressPulse 2s ease-in-out infinite;
+}

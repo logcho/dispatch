@@ -1,0 +1,45 @@
+import React from 'react'
+import './Input.css'
+
+interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+  label?: string
+  hint?: string
+  error?: string
+  icon?: React.ReactNode
+}
+
+export const Input: React.FC<InputProps> = ({
+  label,
+  hint,
+  error,
+  icon,
+  className = '',
+  id,
+  ...props
+}) => {
+  const inputId = id || label?.toLowerCase().replace(/\s+/g, '-')
+
+  return (
+    <div className={`input-group ${error ? 'input-group--error' : ''} ${className}`}>
+      {label && (
+        <label htmlFor={inputId} className="input-group__label">
+          {label}
+        </label>
+      )}
+      <div className="input-group__wrapper">
+        {icon && <span className="input-group__icon">{icon}</span>}
+        <input
+          id={inputId}
+          className={`input-group__input ${icon ? 'input-group__input--with-icon' : ''}`}
+          {...props}
+        />
+      </div>
+      {hint && !error && (
+        <span className="input-group__hint">{hint}</span>
+      )}
+      {error && (
+        <span className="input-group__error">{error}</span>
+      )}
+    </div>
+  )
+}

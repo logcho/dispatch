@@ -1,0 +1,186 @@
+/* ─── Settings Styles ────────────────────────────────────────────────────── */
+
+.settings {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-6) var(--space-8) var(--space-12);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  max-width: 720px;
+}
+
+/* ── Section ──────────────────────────────────────────────────────────────── */
+.settings__section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.settings__section-title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-md);
+  font-weight: var(--weight-semibold);
+  color: var(--color-text-primary);
+}
+
+/* ── System Status ────────────────────────────────────────────────────────── */
+.settings__status-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.settings__status-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-2) 0;
+}
+
+.settings__status-item:not(:last-child) {
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.settings__status-label {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+.settings__status-value {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  color: var(--color-text-primary);
+}
+
+.settings__status-value--connected { color: var(--color-success); }
+.settings__status-value--error { color: var(--color-error); }
+.settings__status-value--checking { color: var(--color-text-tertiary); }
+
+.settings__status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.settings__status-dot--connected {
+  background: var(--color-success);
+  box-shadow: 0 0 8px var(--color-success);
+}
+
+.settings__status-dot--error {
+  background: var(--color-error);
+  box-shadow: 0 0 8px var(--color-error);
+}
+
+.settings__status-dot--checking {
+  background: var(--color-text-tertiary);
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* ── Form ─────────────────────────────────────────────────────────────────── */
+.settings__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.settings__form-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: var(--space-2);
+}
+
+/* ── Options ──────────────────────────────────────────────────────────────── */
+.settings__options {
+  display: flex;
+  flex-direction: column;
+}
+
+.settings__option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-3) 0;
+  cursor: pointer;
+}
+
+.settings__option:not(:last-child) {
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.settings__option-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.settings__option-name {
+  font-size: var(--text-base);
+  font-weight: var(--weight-medium);
+  color: var(--color-text-primary);
+}
+
+.settings__option-desc {
+  font-size: var(--text-sm);
+  color: var(--color-text-tertiary);
+}
+
+/* ── Toggle ───────────────────────────────────────────────────────────────── */
+.settings__toggle {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 44px;
+  height: 24px;
+  background: var(--color-bg-hover);
+  border-radius: var(--radius-full);
+  position: relative;
+  cursor: pointer;
+  transition: background var(--transition-base);
+  flex-shrink: 0;
+}
+
+.settings__toggle::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 18px;
+  height: 18px;
+  background: var(--color-text-secondary);
+  border-radius: 50%;
+  transition: all var(--transition-base);
+}
+
+.settings__toggle:checked {
+  background: var(--color-accent);
+}
+
+.settings__toggle:checked::after {
+  left: 23px;
+  background: white;
+}
+
+/* ── About ────────────────────────────────────────────────────────────────── */
+.settings__about {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.settings__about-text {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--leading-relaxed);
+}
+
+.settings__about-version {
+  font-size: var(--text-xs);
+  color: var(--color-text-tertiary);
+  margin-top: var(--space-2);
+}

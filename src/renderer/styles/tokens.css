@@ -1,0 +1,109 @@
+/* ─── Design Tokens ──────────────────────────────────────────────────────────
+   CSS Custom Properties defining the entire visual language of Dispatch.
+   Dark-first, premium aesthetic with carefully crafted HSL colors.
+   ────────────────────────────────────────────────────────────────────────── */
+
+:root {
+  /* ── Color Palette ──────────────────────────────────────────────────────── */
+
+  /* Background layers (darkest → lightest) */
+  --color-bg-base: hsl(240 10% 3.5%);
+  --color-bg-surface: hsl(240 6% 7%);
+  --color-bg-elevated: hsl(240 5% 10%);
+  --color-bg-overlay: hsl(240 5% 13%);
+  --color-bg-hover: hsl(240 4% 16%);
+
+  /* Borders */
+  --color-border-subtle: hsl(240 4% 14%);
+  --color-border-default: hsl(240 4% 18%);
+  --color-border-strong: hsl(240 4% 24%);
+
+  /* Text */
+  --color-text-primary: hsl(0 0% 95%);
+  --color-text-secondary: hsl(240 4% 65%);
+  --color-text-tertiary: hsl(240 4% 45%);
+  --color-text-inverse: hsl(240 10% 4%);
+
+  /* Accent — Electric Indigo / Violet */
+  --color-accent: hsl(252 87% 64%);
+  --color-accent-hover: hsl(252 87% 72%);
+  --color-accent-muted: hsl(252 40% 20%);
+  --color-accent-subtle: hsl(252 40% 12%);
+
+  /* Success / Running */
+  --color-success: hsl(152 60% 52%);
+  --color-success-muted: hsl(152 30% 15%);
+
+  /* Warning / Paused */
+  --color-warning: hsl(38 92% 60%);
+  --color-warning-muted: hsl(38 40% 15%);
+
+  /* Error / Failed */
+  --color-error: hsl(0 72% 60%);
+  --color-error-muted: hsl(0 30% 15%);
+
+  /* Info */
+  --color-info: hsl(210 90% 60%);
+  --color-info-muted: hsl(210 30% 15%);
+
+  /* ── Typography ─────────────────────────────────────────────────────────── */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', 'Fira Code', ui-monospace, monospace;
+
+  --text-xs: 0.6875rem;    /* 11px */
+  --text-sm: 0.8125rem;    /* 13px */
+  --text-base: 0.875rem;   /* 14px */
+  --text-md: 0.9375rem;    /* 15px */
+  --text-lg: 1.0625rem;    /* 17px */
+  --text-xl: 1.25rem;      /* 20px */
+  --text-2xl: 1.5rem;      /* 24px */
+  --text-3xl: 1.875rem;    /* 30px */
+  --text-4xl: 2.25rem;     /* 36px */
+
+  --leading-tight: 1.2;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.65;
+
+  --weight-normal: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  /* ── Spacing ────────────────────────────────────────────────────────────── */
+  --space-0: 0;
+  --space-1: 0.25rem;   /* 4px */
+  --space-2: 0.5rem;    /* 8px */
+  --space-3: 0.75rem;   /* 12px */
+  --space-4: 1rem;      /* 16px */
+  --space-5: 1.25rem;   /* 20px */
+  --space-6: 1.5rem;    /* 24px */
+  --space-8: 2rem;      /* 32px */
+  --space-10: 2.5rem;   /* 40px */
+  --space-12: 3rem;     /* 48px */
+  --space-16: 4rem;     /* 64px */
+
+  /* ── Radii ──────────────────────────────────────────────────────────────── */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+  --radius-full: 9999px;
+
+  /* ── Shadows ────────────────────────────────────────────────────────────── */
+  --shadow-sm: 0 1px 2px hsla(0 0% 0% / 0.3);
+  --shadow-md: 0 4px 12px hsla(0 0% 0% / 0.3);
+  --shadow-lg: 0 8px 32px hsla(0 0% 0% / 0.4);
+  --shadow-glow: 0 0 20px hsla(252 87% 64% / 0.15);
+
+  /* ── Layout ─────────────────────────────────────────────────────────────── */
+  --sidebar-width: 260px;
+  --sidebar-collapsed-width: 72px;
+  --topbar-height: 52px;
+  --drag-region-height: 38px;
+
+  /* ── Transitions ────────────────────────────────────────────────────────── */
+  --transition-fast: 120ms ease;
+  --transition-base: 200ms ease;
+  --transition-slow: 350ms ease;
+  --transition-spring: 400ms cubic-bezier(0.16, 1, 0.3, 1);
+}
